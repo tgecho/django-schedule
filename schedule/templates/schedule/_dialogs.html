@@ -1,3 +1,5 @@
+{% extends "schedule/base.html" %}
+
 {% block extra_head %}
 {{block.super}}
 <script>
@@ -31,6 +33,7 @@ function openURL(url, event){
 </script>
 {% endblock %}
 
+{% block body %}
 
 <div style="display:none;" id="delete_dialog" title="Question">
   Do you want to cancel this occurrence or delete all occurrences of this event?
@@ -40,3 +43,4 @@ function openURL(url, event){
   Do you want to edit this occurrence or all occurrences?
 </div>
 
+{% endblock %}

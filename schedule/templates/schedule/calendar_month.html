@@ -1,8 +1,9 @@
-{% extends "schedule/base.html" %}
+{% extends "schedule/_dialogs.html" %}
 {% load scheduletags %}
 
- {% block body %}
-{% include "schedule/_dialogs.html" %}
+{% block body %}
+ {{block.super}}
+
 <div class="tablewrapper">
   <div class="calendarname">{{ calendar.name }}</div>
   {% prevnext "month_calendar" calendar.slug periods.month "F Y"%}
